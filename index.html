@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
@@ -23,7 +23,8 @@ h1,h2,h3,.logo{font-family:'Unbounded',sans-serif;line-height:1.05;text-transfor
 .btn.ghost:hover{background:#fff;color:var(--ink)}
 
 /* nav */
-header{position:fixed;inset:0 0 auto 0;z-index:50;background:rgba(13,13,13,.8);backdrop-filter:blur(12px);border-bottom:1px solid #ffffff14}
+.topbar{position:fixed;inset:0 0 auto 0;z-index:60;height:38px;background:var(--red);color:#fff;display:flex;align-items:center;justify-content:center;gap:8px;font-size:.85rem;text-align:center;padding:0 10px}.topbar a{font-weight:800;background:#fff;color:var(--red);padding:3px 12px;border-radius:20px;white-space:nowrap}.topbar a:hover{background:var(--ink);color:#fff}@media(max-width:560px){.topbar{font-size:.72rem}}
+header{position:fixed;inset:38px 0 auto 0;z-index:50;background:rgba(13,13,13,.8);backdrop-filter:blur(12px);border-bottom:1px solid #ffffff14}
 header .wrap{display:flex;justify-content:space-between;align-items:center;height:68px}
 .logo{font-weight:900;font-size:1.05rem;letter-spacing:.02em}
 .logo b{color:var(--red)}
@@ -32,7 +33,7 @@ nav a:hover{color:var(--red)}
 @media(max-width:760px){nav{display:none}}
 
 /* hero */
-.hero{position:relative;min-height:100vh;padding:110px 0 60px;display:flex;align-items:center;background:radial-gradient(circle at 75% 40%,#e1060033,transparent 55%),var(--ink)}
+.hero{position:relative;min-height:100vh;padding:150px 0 60px;display:flex;align-items:center;background:radial-gradient(circle at 75% 40%,#e1060033,transparent 55%),var(--ink)}
 .hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center}
 .tag{display:inline-block;border:1px solid var(--red);color:var(--red);padding:6px 16px;border-radius:40px;font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:22px}
 .hero h1{font-size:clamp(2.4rem,6vw,5rem);font-weight:900}
@@ -134,6 +135,7 @@ footer .note{margin-top:10px;font-size:.72rem;opacity:.6}
   </symbol>
 </svg>
 
+<div class="topbar">Связь со звёздами и сотрудничество: <a href="https://www.instagram.com/_dzogli_blog_/" target="_blank" rel="noopener">@_dzogli_blog_</a></div>
 <header>
   <div class="wrap">
     <a href="#top" class="logo">Максим <b>FuckOf</b></a>
