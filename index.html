@@ -299,9 +299,9 @@ const rnd=(a,b)=>a+Math.random()*(b-a);
 function size(){w=innerWidth;h=Math.max(innerHeight,h,coarse?screen.height:0);c.width=w*dpr;c.height=h*dpr;c.style.width=w+"px";c.style.height=h+"px";x.setTransform(dpr,0,0,dpr,0,0)}
 function init(){size();lastW=innerWidth;
  const n=coarse?Math.min(26,Math.floor(w*h/30000)+14):Math.min(70,Math.floor(w*h/20000)+20);
- ps=Array.from({length:n},()=>({x:rnd(0,w),y:rnd(0,h),vx:rnd(-.3,.3),vy:rnd(-.3,.3),r:rnd(.8,2.2),c:Math.random()<.7?"225,6,0":"255,255,255"}));
- const k=coarse?4:8;
- shoes=Array.from({length:k},(_,i)=>({x:rnd(0,w),y:rnd(0,h),vx:rnd(.12,.3)*(Math.random()<.5?-1:1),vy:rnd(-.12,.12),a:rnd(0,6.28),va:rnd(-.0025,.0025),s:rnd(.7,1.6),al:rnd(.12,.26),c:i%3==0?"255,255,255":"225,6,0"}));
+ ps=[];
+ const k=coarse?5:10;
+ shoes=Array.from({length:k},(_,i)=>({x:rnd(0,w),y:rnd(0,h),vx:rnd(.12,.3)*(Math.random()<.5?-1:1),vy:rnd(-.12,.12),a:rnd(0,6.28),va:rnd(-.0025,.0025),s:rnd(.7,1.6),al:rnd(.16,.32),c:i%3==0?"255,255,255":"225,6,0"}));
 }
 function frame(){
  x.clearRect(0,0,w,h);
